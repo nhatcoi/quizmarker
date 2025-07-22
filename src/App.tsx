@@ -46,7 +46,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Quiz Maker</h1>
-        <p>Tạo và làm quiz từ text đơn giản</p>
+        <p>NhatCoiDzai</p>
       </header>
 
       <ErrorBoundary>
