@@ -42,7 +42,7 @@ const QuizDisplay: React.FC<QuizDisplayProps> = ({ questions, mode, onQuizComple
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setShowAnswer(false);
       }
-    }, 2500);
+    }, 1000);
     
     setAutoNextTimer(timer);
   };
