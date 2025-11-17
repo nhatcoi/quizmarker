@@ -22,12 +22,15 @@ function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [completedQuestions, setCompletedQuestions] = useState<Question[]>([]);
   const [quizMode, setQuizMode] = useState<QuizMode>('test');
+  const [shouldShuffleQuestions, setShouldShuffleQuestions] = useState(true);
 
   const handleQuizCreated = (
     newQuestions: Question[],
-    mode: QuizMode
+    mode: QuizMode,
+    shuffleQuestionsEnabled: boolean
   ) => {
-    setQuestions(shuffleQuestions(newQuestions));
+    setShouldShuffleQuestions(shuffleQuestionsEnabled);
+    setQuestions(shuffleQuestionsEnabled ? shuffleQuestions(newQuestions) : newQuestions);
     setQuizMode(mode);
     setCurrentState('quiz');
   };
@@ -45,7 +48,7 @@ function App() {
 
   const handleRetakeQuiz = () => {
     const resetQuestions = questions.map(q => ({ ...q, userAnswers: [] }));
-    setQuestions(shuffleQuestions(resetQuestions));
+    setQuestions(shouldShuffleQuestions ? shuffleQuestions(resetQuestions) : resetQuestions);
     setCurrentState('quiz');
   };
 

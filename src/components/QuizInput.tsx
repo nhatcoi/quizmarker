@@ -4,7 +4,7 @@ import { parseQuizText } from '../utils/quizParser';
 import { formatTextWithGemini } from '../services/geminiService';
 
 interface QuizInputProps {
-  onQuizCreated: (questions: Question[], mode: QuizMode) => void;
+  onQuizCreated: (questions: Question[], mode: QuizMode, shuffleQuestions: boolean) => void;
 }
 
 const QuizInput: React.FC<QuizInputProps> = ({ onQuizCreated }) => {
@@ -12,6 +12,7 @@ const QuizInput: React.FC<QuizInputProps> = ({ onQuizCreated }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isFormatting, setIsFormatting] = useState(false);
   const [selectedMode, setSelectedMode] = useState<QuizMode>('test');
+  const [shouldShuffle, setShouldShuffle] = useState(true);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const QuizInput: React.FC<QuizInputProps> = ({ onQuizCreated }) => {
         return;
       }
       
-      onQuizCreated(questions, selectedMode);
+      onQuizCreated(questions, selectedMode, shouldShuffle);
     } catch (error) {
       alert('Có lỗi xảy ra khi parse câu hỏi. Vui lòng kiểm tra lại format.');
       console.error('Parse error:', error);
@@ -1097,6 +1098,17 @@ câu đúng: 2, 5`;
             </label>
           </div>
         </div>
+        <div className="form-group shuffle-toggle">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={shouldShuffle}
+              onChange={(e) => setShouldShuffle(e.target.checked)}
+            />
+            <span>     Đảo câu </span>
+          </label>
+        </div>
+
         <div className="form-group">
           <label htmlFor="quiz-text">
             Nhập câu hỏi theo format (mỗi câu hỏi có các lựa chọn A, B, C... và "Đáp án đúng: X"):
