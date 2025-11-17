@@ -1120,7 +1120,7 @@ câu đúng: 2, 5`;
             className="sample-btn"
             disabled={isFormatting || isLoading}
           >
-            Ví dụ chuẩn
+            AWS
           </button>
           {/* <button 
             type="button" 
