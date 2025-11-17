@@ -1097,7 +1097,6 @@ câu đúng: 2, 5`;
             </label>
           </div>
         </div>
-
         <div className="form-group">
           <label htmlFor="quiz-text">
             Nhập câu hỏi theo format (mỗi câu hỏi có các lựa chọn A, B, C... và "Đáp án đúng: X"):

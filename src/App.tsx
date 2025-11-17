@@ -8,14 +8,26 @@ import './App.css';
 
 type AppState = 'input' | 'quiz' | 'result';
 
+const shuffleQuestions = (questions: Question[]) => {
+  const shuffled = [...questions];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 function App() {
   const [currentState, setCurrentState] = useState<AppState>('input');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [completedQuestions, setCompletedQuestions] = useState<Question[]>([]);
   const [quizMode, setQuizMode] = useState<QuizMode>('test');
 
-  const handleQuizCreated = (newQuestions: Question[], mode: QuizMode) => {
-    setQuestions(newQuestions);
+  const handleQuizCreated = (
+    newQuestions: Question[],
+    mode: QuizMode
+  ) => {
+    setQuestions(shuffleQuestions(newQuestions));
     setQuizMode(mode);
     setCurrentState('quiz');
   };
@@ -32,9 +44,8 @@ function App() {
   };
 
   const handleRetakeQuiz = () => {
-    // Reset user answers và quay về quiz
     const resetQuestions = questions.map(q => ({ ...q, userAnswers: [] }));
-    setQuestions(resetQuestions);
+    setQuestions(shuffleQuestions(resetQuestions));
     setCurrentState('quiz');
   };
 
