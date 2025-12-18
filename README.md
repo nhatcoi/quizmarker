@@ -1,4 +1,4 @@
-# AWS Pricing, Elasticity, Agility, High Availability, Fault Tolerance, Scalability, Hybrid Architecture
+### Example Copy quizz into quizmarker
 
 ### Question 1
 Phát biểu nào sau đây mô tả tốt nhất mô hình định giá **Pay-As-You-Go** của AWS?  
