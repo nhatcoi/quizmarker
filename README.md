@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+Example: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+1. AWS Pricing, Elasticity, Agility, High Availability, Fault Tolerance, Scalability, Hybrid Architecture
+Phát biểu nào sau đây mô tả tốt nhất mô hình định giá Pay-As-You-Go của AWS?
+A. Với AWS, bạn thay thế các chi phí trả trước lớn bằng các khoản thanh toán biến đổi thấp.
+B. Với AWS, bạn thay thế chi phí trả trước thấp bằng các khoản thanh toán biến đổi lớn.
+C. Với AWS, bạn thay thế chi phí trả trước thấp bằng các khoản thanh toán cố định lớn.
+D. Với AWS, bạn thay thế chi phí trả trước lớn bằng các khoản thanh toán cố định thấp.
+Đáp án đúng: A
+Mô hình triển khai nào sau đây cho phép khách hàng chuyển đổi hoàn toàn chi phí CNTT vốn (capex) của họ thành chi phí vận hành (opex)?
+A. On-premises.
+B. Cloud.
+C. Hybrid.
+D. PaaS.
+Đáp án đúng: B
+Đâu là một lợi thế của việc sử dụng AWS Cloud so với giải pháp on-premises truyền thống?
+A. Người dùng không cần phải dự đoán về nhu cầu dung lượng trong tương lai.
+B. Chi phí cố định hàng tháng thấp hơn.
+C. Người dùng có thể kiểm soát hoàn toàn cơ sở hạ tầng vật lý.
+D. Có quyền truy cập vật lý vào các trung tâm dữ liệu cloud.
+Đáp án đúng: A
+So với chi phí trong các trung tâm dữ liệu truyền thống và ảo hóa, AWS có:
+A. Chi phí biến đổi lớn hơn và chi phí trả trước lớn hơn.
+B. Chi phí sử dụng cố định và chi phí trả trước thấp hơn.
+C. Chi phí biến đổi thấp hơn và chi phí trả trước lớn hơn.
+D. Chi phí biến đổi thấp hơn và chi phí trả trước thấp hơn.
+Đáp án đúng: D
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
